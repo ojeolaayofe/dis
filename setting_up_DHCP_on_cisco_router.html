@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/blog-one.css" />
+    <link rel="icon" type="image/x-icon" href="./Assets/Home/logo.svg" />
+    <title>Setting up DHCP on Cisco Router</title>
+  </head>
+  <body>
+    <nav class="navbar pr-5 pl-5">
+      <div class="navbar-brand mt-2">
+        <a href="./index.html" class="mt-5"
+          ><img
+            src="./Assets/Home/logo.svg"
+            alt="Logo"
+            title="Deployed IT Solutions"
+        /></a>
+      </div>
+      <div class="navbar-toggle mt-2" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul
+        class="navbar-menu mt-2 center text-center"
+        style="justify-content: center !important"
+      >
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+
+        <!-- Service Dropdown -->
+        <section class="service-section flexed-column">
+          <li class="link-for-dropdown">
+            Services&nbsp;&nbsp;<img
+              src="./Assets/Other/dropdown-icon.png"
+              alt="Dropdown"
+            />
+          </li>
+
+          <div
+            class="service-dropdown mt-4 flexed-column text-center mt-5 pt-2 pb-3"
+          >
+            <a href="./infrastructure.html" class="mt-1"
+              >Infrastructure Deployment</a
+            ><br />
+            <a href="./configuration.html" class="mt-1"
+              >Configuration, Kitting, and Assembly</a
+            ><br />
+            <a href="./services.html" class="mt-1">Services Deployment</a><br />
+            <a href="./structure.html" class="mt-1"
+              >Structure Cabling Deployment</a
+            ><br />
+            <a href="./wireless.html" class="mt-1"
+              >Wireless Design and Deployment</a
+            ><br />
+            <a href="./cloud.html" class="mt-1">Cloud Service</a>
+          </div>
+        </section>
+        <!--  -->
+
+        <li><a href="./blog.html">Blog</a></li>
+        <a href="./contact.html" class="main-btn-2 mt-5 center">
+          <button class="p-1 pl-5 pr-5">Contact Us</button></a
+        >
+      </ul>
+
+      <a href="./contact.html" class="main-btn mt-2">
+        <button class="p-1 pl-5 pr-5">Contact Us</button></a
+      >
+    </nav>
+    <main>
+      <div class="blog-title flexed-row pl-5">
+        <div class="mt-5">
+          <h1 class="mb-2 normal-spanned-text">Our Blog</h1>
+          <h2 class="mb-2">Setting up DHCP on <br />Cisco Router</h2>
+        </div>
+
+        <img src="./Assets/Other/blog-img-4.png" alt="" />
+      </div>
+
+      <section class="blog-content flexed-row p-5">
+        <p>
+          The primary focus of this article lies in helping you understand how
+          to set up DHCP on Cisco Routers. But before that, you need to first
+          get into what DHCP really means.<br /><br />What is DHCP? DHCP stands
+          for Dynamic Host Configuration Protocol. It's a network protocol that
+          automatically assigns IP addresses and other network configuration
+          information to devices on a network, allowing them to communicate with
+          each other.<br /><br />
+          For more clarity, Imagine DHCP as a helpful coordinator at a party.
+          When you join the party (network ), DHCP hands out unique name tags
+          (IP addresses) to everyone in the party (each device on the network),
+          so communication can become easier without confusion. I am sure you
+          agree that this eventually saves everyone from manually figuring out
+          who's who on the network.
+        </p>
+        <p>
+          <b>What are CISCO Routers?</b><br />
+          A router simply connects different networks. If a router is connected
+          to a network, hosts of the network use the router as the default
+          gateway to reach the host of other networks. Cisco routers are a
+          product line of network devices designed and manufactured by Cisco
+          Systems, a leading networking hardware and telecommunications
+          equipment company. These routers serve as the backbone of many
+          networks, enabling the interconnection of various devices and
+          facilitating the flow of data between them. They often include various
+          features such as security protocols, Quality of Service (QoS)
+          controls, and support for different network protocols, making them
+          widely used in enterprise and service provider environments for
+          building and managing networks.
+        </p>
+        <p>
+          <span style="text-decoration: underline"
+            ><b>The Process of Configuring DHCP on CISCO Routers.</b></span
+          ><br />
+          Configuring DHCP on a Cisco router involves several steps to ensure a
+          seamless and efficient network. Here is a detailed process<br /><br />
+          1. <b>Access the CISCO Router</b><br />
+          The first thing to do is to access the Cisco router. Begin by
+          accessing the router's Command Line Interface (CLI). It's a text-based
+          interface used for entering commands to interact with a computer or
+          software. In the context of networking devices like Cisco routers, CLI
+          allows users to configure settings by entering commands
+          manually.Accessing the CLI can be done using a console cable or by
+          establishing a Telnet/SSH connection. After connecting, log in using
+          the correct credentials. The next thing to do is to access Global
+          Configuration Mode by typing ‘enable’ followed by ‘configure
+          terminal'. This grants you access to the router's configuration
+          settings.
+        </p>
+        <p>
+          2. <b>Configure the Router Interface</b><br />
+          Configuring the Router Interface is the next step to take. Determine
+          the interface that will receive DHCP requests. Access the interface
+          configuration mode using commands like ‘interface GigabitEthernet0/0’.
+          After which you enable DHCP. Navigate to DHCP Configuration mode by
+          typing ‘ip dhcp pool ’. Then you define the DHCP pool parameters such
+          as network, default gateway, DNS servers, and lease duration.For
+          instance: Router config #ip dhcp pool Floor DHCP Router(dhcp-config)#
+        </p>
+        <p>
+          3. <b>Configure Lease Duration</b><br />
+          Specify the lease duration for IP addresses using the command:
+          ‘lease ’. This determines how long an IP address is assigned to a
+          device. If you do not specify this argument, the default lease time of
+          24 hours will be used. Also, prevent specific IP addresses from being
+          assigned by configuring exclusions. Use the ‘ip dhcp
+          excluded-address ’ command.
+        </p>
+        <p>
+          4. <b>Verify DHCP Configuration</b><br />
+          After configuration, use the ‘show ip dhcp pool’ command to verify
+          settings and check allocated addresses with ‘show ip dhcp binding’.
+        </p>
+        <p>
+          5. <b>Save Configuration</b><br />
+          Save the configuration changes by entering ‘write memory or copy
+          running-config startup-config’. This basic setup creates a DHCP pool,
+          defines parameters, assigns DHCP to an interface, and eventually saves
+          the configuration. You may also adjust the details based on your
+          network requirements.
+        </p>
+        <p>
+          6. <b>Testing DHCP</b><br />
+          Connect a device to the configured interface and check if it obtains
+          an IP address automatically. Troubleshoot using the ‘debug ip dhcp
+          server events’ command if needed.
+        </p>
+        <p class="text-center">
+          Finally, configuring DHCP on a Cisco router is a multi-step process
+          which is crucial for effective IP address assignment in a network.
+          Adhering to this guide will enable you to establish DHCP seamlessly
+          and uphold the functionality of your network infrastructure. Please
+          keep in mind that the commands and configurations mentioned above
+          might differ depending on your router model and software version.You
+          may consult Cisco's official documentation for model-specific
+          information or alternatively, hire an experienced professional such as
+          DeployedItSolutions to get the job done for you. Thanks for reading!
+          Kindly visit our website and connect with us on <a href="#">X</a>,
+          <a href="#">Facebook</a>, and <a href="#">linkedin</a>
+        </p>
+      </section>
+    </main>
+    <footer class="p-5 center">
+      <section class="flexed-row mt-5 mb-5">
+        <div class="footer-colored p-3">
+          <h1 class="mb-4" style="font-weight: 600">Deployed IT Solutions</h1>
+          <p>
+            <a href="./services.html">Browse our services</a> or
+            <a href="./contact.html">contact us</a> if you need help.
+          </p>
+        </div>
+        <div>
+          <div class="mail footer-colored p-3">
+            <h2 style="font-weight: 600">Get mails from us</h2>
+
+            <div class="mt-5 flexed-row">
+              <input type="text" placeholder="Subscribe to our newsletter" />
+              <button>Go</button>
+            </div>
+          </div>
+
+          <div class="social pt-2 flexed-row">
+            <a
+              href="https://x.com/DeployedIT?t=bdOpdS51UvVCtHBcYf55vw&s=09"
+              target="_blank"
+            >
+              <img src="./Assets/Home/twitter-icon.png" alt="Icon"
+            /></a>
+            <a href="https://x.com/DeployedIT" target="_blank">
+              <img src="./Assets/Home/insta-icon.png" alt="Icon"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/deployeditsolutions/"
+              target="_blank"
+            >
+              <img src="./Assets/Home/linkedin-icon.png" alt="Icon"
+            /></a>
+
+            <section class="footer-colored center pr-2 pl-2">
+              <p>© Deployeditsolutions 2024</p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
