@@ -1,0 +1,121 @@
+@import url("./index.css");
+@import url("./font.css");
+@import url("./utilities.css");
+
+/* TOP */
+.top {
+  /* height: 100vh; */
+  background: url("../Assets/Home/bg.webp");
+  background-size: cover;
+
+  @media (width < 768px) {
+    height: 100vh;
+  }
+}
+.top > div.texts > h1,
+p {
+  color: #eee9ef;
+}
+.top > div.texts > a > button {
+  background-color: #39a3da;
+  color: #fcfcfd;
+  border-radius: 8px;
+}
+
+/* STATS */
+.stats {
+  flex-wrap: wrap;
+  @media (width < 1000px) {
+    height: auto;
+  }
+}
+.stats > div {
+  width: 50%;
+  @media (width < 768px) {
+    width: 100%;
+    height: 50%;
+  }
+}
+.stats > div:nth-of-type(1) {
+  background-color: #39a3da;
+  color: #eee9ef;
+  flex-wrap: wrap;
+  @media (width < 1000px) {
+    padding: 20px;
+  }
+}
+.stats > .stat-details > div:nth-of-type(1) {
+  @media (width < 1000px) {
+    width: 100%;
+  }
+}
+.stats > .stat-details > div.digits {
+  justify-content: space-between;
+  width: 100%;
+  @media (width < 1000px) {
+    width: 100%;
+  }
+}
+.stats > .stat-details > .digits > div > p {
+  color: #142b32;
+}
+.btn-container {
+  width: 100%;
+}
+.btn-container > button {
+  color: #fef8e5;
+  border-radius: 8px;
+  background-color: #142b32;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+.stats > div:nth-of-type(2) {
+  background: url("../Assets/Home/stats.png");
+  background-size: cover;
+  @media (width < 768px) {
+    height: 20em;
+  }
+}
+.stats > img {
+  width: 50% !important;
+  @media (width < 1000px) {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* SERVICES */
+.services {
+  background-color: #f5fffe;
+  @media (width < 1000px) {
+    height: auto;
+    padding: 20px;
+  }
+}
+.services > p:nth-of-type(1) {
+  color: #000;
+}
+.services > section {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services > section > a {
+  text-decoration: none;
+  width: 32%;
+  background-color: #f4f5f4;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  justify-content: flex-start !important;
+  @media (width < 1000px) {
+    width: 100%;
+  }
+}
+.services > section > a:hover {
+  transform: scale(1.05);
+  background-color: #38a3db;
+}
+
+.services > section > a > .service > .right {
+  margin-top: auto;
+}

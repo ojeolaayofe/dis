@@ -1,0 +1,64 @@
+@import url("./index.css");
+@import url("./font.css");
+@import url("./utilities.css");
+p,
+h1,
+h2 {
+  color: #eee9ef !important;
+}
+p{
+  font-weight: 300 !important;
+}
+.navbar {
+  position: relative !important;
+  /* background: #07140a !important; */
+}
+main {
+  width: 100%;
+  background: #07140a;
+  color: #eee9ef;
+}
+.blog-title {
+  flex-wrap: wrap !important;
+  justify-content: space-between;
+  flex-wrap: wrap !important;
+  @media (width<768px) {
+    padding: 20px !important;
+  }
+}
+.blog-title > img {
+  @media (width<768px) {
+    width: 100%;
+  }
+}
+.blog-content {
+  flex-wrap: wrap !important;
+  justify-content: space-between;
+  @media (width<768px) {
+    padding: 20px;
+  }
+}
+.blog-content > p{
+  width: 49% !important;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  @media (width<768px) {
+    width: 100% !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+.blog-content > p:last-child {
+  width: 100% !important;
+}
+.blog-content > p > a{
+  font-weight: 700;
+  text-decoration: none;
+}
+ul {
+  list-style:circle;
+  width: 100%;
+}
+li {
+  margin: 2em 0 2em 0;
+}

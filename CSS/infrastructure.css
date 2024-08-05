@@ -1,0 +1,82 @@
+@import url("./index.css");
+@import url("./font.css");
+@import url("./utilities.css");
+
+/* TOP */
+.top {
+  /* height: 100vh; */
+  background: url("../Assets/Home/bg.webp");
+  background-size: cover;
+
+  @media (width < 1000px) {
+    height: 100vh;
+  }
+}
+.top > div.texts > h1,
+p {
+  color: #eee9ef;
+}
+.top > div.texts > a > button {
+  background-color: #39a3da;
+  color: #fcfcfd;
+  border-radius: 8px;
+}
+.top > .top-images {
+  gap: 2em;
+  align-items: flex-end;
+  @media (width < 1000px) {
+    height: 100vh;
+    display: none;
+  }
+}
+.top > .top-images > img {
+  border-radius: 8px;
+}
+.top > .top-images > img:nth-of-type(2) {
+  height: 80%;
+  width: auto;
+}
+/* STATS */
+.stats {
+  flex-wrap: wrap;
+  @media (width < 1000px) {
+    height: auto;
+  }
+}
+.stats > div {
+  width: 50%;
+  @media (width < 1000px) {
+    width: 100%;
+  }
+}
+.stats > div:nth-of-type(1) {
+  background-color: #39a3da;
+  color: #eee9ef;
+  flex-wrap: wrap;
+  @media (width < 1000px) {
+    padding: 20px;
+  }
+}
+.stats > .stat-details > div:nth-of-type(1) {
+  @media (width < 1000px) {
+    width: 100%;
+  }
+}
+.btn-container {
+  width: 100%;
+}
+.btn-container > button,
+.btn-container > a > button {
+  color: #fef8e5;
+  border-radius: 8px;
+  background-color: #142b32;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+.stats > img{
+  width: 50% !important;
+  @media (width < 1000px) {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
